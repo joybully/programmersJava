@@ -7,7 +7,7 @@ public class OperatorEx03{
 
         short s1 = 10;
         short s2 = 20;
-        // 산사ㅜㄹ 연산을 위한 기본자료형
+        // 산술 연산을 위한 기본자료형
         // int 이상
         // 따라서 에러발생
         // short sum2 = s1 + s2;
