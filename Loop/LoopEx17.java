@@ -11,8 +11,10 @@ public class LoopEx17{
             while(j<=5){
                 j++;
                 if(j==3) {
-                    // break outer;
                     continue outer;
+                }
+                if(i==5){
+                    break outer;
                 }
                 System.out.println(i + " / " + j);
             }

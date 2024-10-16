@@ -10,12 +10,12 @@ public class ConditionEx09{
             기준점
         */
        System.out.println("시작");
-       int score = 55;
-       // 여러개의 조건 중 하나를 선택
-       if(score >= 90){
+        int score = 55;
+        // 여러개의 조건 중 하나를 선택
+        if(score >= 90){
         System.out.println("A");
-       }
-       else{
+        }
+        else{
         if(score >= 80){
             System.out.println("B");
         }
@@ -32,7 +32,7 @@ public class ConditionEx09{
                 }
             }
         }
-       }
+        }
        // if ~ else if ~ else 구문
        if(score >= 90){
             System.out.println("A");
