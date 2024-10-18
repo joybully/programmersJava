@@ -9,7 +9,7 @@ public class ArrayEx06{
         a2 = 20;
         System.out.println(a1);
         System.out.println(a2);
-        // 참조 자료셩
+        // 참조 자료형
         int[] arr1 = {10, 20, 30};
         // shallow copy
         int[] arr2 = arr1;

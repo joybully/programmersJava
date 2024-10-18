@@ -13,5 +13,20 @@ public class ArrayEx12{
         int[][] arr2 = {{10, 20, 30}, {40, 50}, {10}};
         System.out.println(arr1[0][0]);
         System.out.println(arr1[2][0]);
+        int[][] arr = new int[3][];
+        arr[0] = new int[]{10, 20, 30};
+        arr[1] = new int[]{40, 50};
+        arr[2] = new int[]{10, 20, 30};
+        // arr[0] = {10, 20, 30};
+        // arr[1] = {40, 50};
+        // arr[2] = {10, 20, 30};
+        for(int[] col:arr){
+            for(int data:col){
+                System.out.print(data + "\t");
+            }
+            System.out.println();
+        }
+        int[] arr4 = new int[3];
+        arr4 = {1,2,3};
     }
 }

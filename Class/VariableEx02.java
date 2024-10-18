@@ -9,8 +9,7 @@ class Variable{
     // 앞에 static을 붙인다
     static void doFunc2(){
         // 에러코드
-        // 
-        System.out.println("doFunc1() 호출" + this.classVariable);
+        // System.out.println("doFunc1() 호출" + this.classVariable);
         System.out.println("doFunc1() 호출");
     }
 }
