@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 다음 -->
+    <form action="https://search.daum.net/search" method="get">
+        다음 검색어 : <input type="text" name="q" />
+        <input type="submit" />
+    </form>
+    <br />
+    <!-- 네이버 -->
+    <form action="https://search.naver.com/search.naver" method="get">
+        네이버 검색어 : <input type="text" name="query" placeholder="검색어 입력" />
+        <!-- 검색 버튼 역할을 하는 3가지 -->
+        <input type="submit" value="검색하기" />
+        <input type="image" src="./tomcat.svg" />
+        <button>버튼 모양</button>
+
+        <input type="reset" value="내용지우기" />
+        <!-- 아무 동작 안하는 버튼이지만 javascript와 같이 쓰면 동작 만들어짐 -->
+        <input type="button" value="모양만 있는 버튼" />
+
+    </form>
+</body>
+
+</html>

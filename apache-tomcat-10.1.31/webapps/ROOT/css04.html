@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        /* 복합 선택자 */
+        /* 자식(>), 후손 */
+        /* 후손 */
+        div p {
+            color: red;
+        }
+
+        /* 자식 */
+        div>p {
+            color: blue;
+        }
+
+        /* 아우 전체 선택 */
+        div~p {
+            color: blue;
+        }
+
+        /* 아우 하나 선택 */
+        div+p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Hello CSS1</p>
+    <div>
+        <p>Hello CSS2</p><span>
+            <p>Hello CSS3</p>
+        </span>
+        <p>Hello CSS4</p>
+    </div>
+    <p>Hello CSS5</p>
+    <p>Hello CSS5</p>
+</body>
+
+</html>

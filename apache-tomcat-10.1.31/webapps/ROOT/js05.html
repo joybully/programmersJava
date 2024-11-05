@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 문자열
+        // 작음 따옴표 쓰는게 편하다
+        let str1 = 'Hello';
+        let str2 = "Hello";
+
+        console.log(str1, str2);
+        console.log(typeof str1, typeof str2);
+
+        let str3 = new String('Hello');
+        console.log(str3.toString());
+        console.log(str3.length);
+        console.log(str3.substring(2));
+
+        // 템플릿트 문자열
+        // 따옴표가 아니라 백탭 (`)으로 묶는다
+        let str4 = `Hello 
+        World`;
+        console.log(str4);
+
+        let one = 1, two = 2;
+        console.log(`${one} + ${two} 는 3이다`);
+        console.log('${one} + ${two} 는 3이다');
+    </script>
+</body>
+
+</html>

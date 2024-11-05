@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <!-- 선택 : 다중 -->
+        <input type="checkbox" /> 사과 <br />
+        <input type="checkbox" checked /> 수박 <br />
+        <input type="checkbox" /> 딸기 <br />
+
+        <!-- 선택 : 단일 -->
+        <input type="radio" name="r" /> 사과 <br />
+        <input type="radio" name="r" checked /> 수박 <br />
+        <input type="radio" name="r" /> 딸기 <br />
+
+        <br />
+        <!-- 선택 : 단일 -> 다중(x) : ctrl,shift-->
+        <select>
+            <option>사과</option>
+            <option selected>수박</option>
+            <option>딸기</option>
+        </select>
+
+        <br />
+        <!-- 선택 : 단일 -> 다중(x) : ctrl,shift-->
+        <select multiple size="3">
+            <option>사과</option>
+            <option selected>수박</option>
+            <option>딸기</option>
+        </select>
+    </form>
+</body>
+
+</html>

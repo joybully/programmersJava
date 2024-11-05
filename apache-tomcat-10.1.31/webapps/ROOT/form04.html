@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 입력된 내용을 처리할 방법 
+    http://127.0.0.1:8080/process.html?data1=5&data2=10
+        process.html : 입력값 처리될 페이지
+        data1, data2 : 입력값
+        data1=5 & data2=10     
+    
+        전송방식 : get / post
+            get : url에 포함해서 전송
+            post : 헤더에 포함해서 전송
+    -->
+    <!-- form은 post 방식 -->
+    <form action="process.html" method="post">
+        post입력 : <input type="text" name="data1" />
+        post입력 : <input type="text" name="data2" />
+        <input type="submit" />
+    </form>
+    <br />
+    <!-- 링크는 get 방식 -->
+    <a href="./process.html?data1=5&data2=10">전송</a>
+
+    <!--
+    search(처리 될 페이지)
+    ?
+    w=tot(변수 = 값)
+    &DA=YZR
+    &t__nil_searchbox=btn
+    &q=%EC%BF%A0%ED%8C%A1
+    -->
+</body>
+
+</html>
