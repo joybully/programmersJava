@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const viewTag = function () {
+            let tag = document.getElementById('h2');
+            console.log(tag);
+            console.log(typeof tag);   // DOM
+            console.log(tag.innerHTML);
+            tag.innerHTML = 'new Header 1';
+
+            // Tag 이름
+            let tags = document.getElementsByTagName('h2');
+            console.log(tags);
+            console.log(tags.length);
+
+            // Class
+            let classes = document.getElementsByClassName('c1');
+            console.log(classes);
+            console.log(classes.length);
+        };
+    </script>
+</head>
+
+<body>
+    <input type="button" value="태그 가져오기" onclick="viewTag()" />
+    <br />
+    <br />
+    <h2 id="h1" class="c1">Header 1</h2>
+    <h2 id="h2" class="c1">Header 2</h2>
+    <h2 id="h3" class="c2">Header 3</h2>
+    <h2 id="h4" class="c2">Header 4</h2>
+    <h2 id="h5" class="c3">Header 5</h2>
+</body>
+
+</html>

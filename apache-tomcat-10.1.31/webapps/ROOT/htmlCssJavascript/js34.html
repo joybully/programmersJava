@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const checkfrm = function () {
+            // select의 기본
+            console.log(document.frm.sel.options);
+            console.log(document.frm.sel.options.length);
+            console.log(document.frm.sel.options[0]);
+
+            // select 선택된 인덱스값 가져오기
+            console.log(document.frm.sel.options.selectedIndex);
+
+            // select 선택된 value값 가져오기
+            console.log(document.frm.sel.options[document.frm.sel.options.selectedIndex].text);
+        };
+    </script>
+</head>
+
+<body>
+    <form name="frm">
+        <select name="sel">
+            <option>사과</option>
+            <option selected>수박</option>
+            <option>딸기</option>
+            <option>참외</option>
+        </select>
+        <br />
+        <br />
+        <input type="button" value="내용 가져오기" onClick="checkfrm()" />
+    </form>
+</body>
+
+</html>

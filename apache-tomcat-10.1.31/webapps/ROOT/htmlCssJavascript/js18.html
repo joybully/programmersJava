@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function func2() {
+            console.log('fun2() 호출');
+        }
+        function func3(data1) {
+            console.log('func3() 호출 :', data1);
+        }
+        function func4(data1, data2) {
+            console.log('func4() 호출 : ', data1);
+            console.log('func4() 호출 : ', data2);
+        }
+        function func5(data1, data2) {
+            let sum = data1 + data2;
+            return sum;
+        }
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 선언 함수
+        // 선언
+        function func1() {
+            console.log('fun1() 호출');
+        }
+        func1();
+        func2();
+        func3(10);
+        // 인자의 갯수를 정확히 파악하지 않음
+        // func3();
+        func4(10, 20);
+
+        let result = func5(100, 200);
+        console.log('result :', result);
+    </script>
+</body>
+
+</html>

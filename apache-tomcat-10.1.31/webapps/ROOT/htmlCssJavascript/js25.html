@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 가변인자
+        const func1 = function () {
+            // arguments - 파라미터의 내용을 받는 배열
+            console.log(arguments.length);
+            for (let data of arguments) {
+                console.log(data);
+            }
+        };
+
+        const func2 = function (...datas) {
+            console.log(datas.length);
+            for (let data of datas) {
+                console.log(data);
+            }
+        }
+
+        func1(1);
+        func1(1, 2);
+        func1(1, 2, 3);
+
+        func2(1);
+        func2(1, 2);
+        func2(1, 2, 3);
+    </script>
+</body>
+
+</html>

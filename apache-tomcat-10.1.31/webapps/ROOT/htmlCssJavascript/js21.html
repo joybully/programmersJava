@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const func1 = function () {
+            console.log('func1 호출');
+        };
+
+        // lambda 함수
+
+        const func2 = () => {
+            console.log('func2 호출');
+        }
+
+        const func3 = () => console.log('func3 호출');
+        const func4 = (data1) => console.log('func4 호출', data1);
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        func1();
+        func2();
+        func3();
+        func4(10);
+    </script>
+</body>
+
+</html>

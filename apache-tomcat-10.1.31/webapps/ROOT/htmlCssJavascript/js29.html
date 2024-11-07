@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!--무조건 form정의가 먼저 나와야한다-->
+    <form name="frm1" action="test1.jsp"></form>
+    <form name="frm2" action="test1.jsp"></form>
+    <form name="frm3" action="test1.jsp"></form>
+    <script type="text/javascript">
+        console.log(document.forms);
+        console.log(document.forms.length);
+        console.log(document.forms[0]);
+        console.log(document.forms[1]);
+        console.log(document.frm1);
+        console.log(document.frm2);
+        console.log(document.frm1.action);
+        console.log(document.frm2.action);
+    </script>
+    <!--아니면 이렇게-->
+    <script type="text/javascript">
+        // 이벤트 - window.onload
+        // html 문서가 전부 로딩(dom)이 되면
+        // window.onload = function () {
+        const checkfrm = function () {
+            console.log(document.forms);
+            console.log(document.forms.length);
+            console.log(document.forms[0]);
+            console.log(document.forms[1]);
+            console.log(document.frm1);
+            console.log(document.frm2);
+            console.log(document.frm1.action);
+            console.log(document.frm2.action);
+        };
+    </script>
+    <form name="frm1" action="test1.jsp"></form>
+    <form name="frm2" action="test1.jsp"></form>
+    <form name="frm3" action="test1.jsp"></form>
+    <input type="button" value="form 확인" onclick="checkfrm()" />
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const gugudan = (dan) => {
+            let html = '';
+            html += '<table border="1" cellspacing="0" width="200">';
+            for (let col = 1; col <= 9; col++) {
+                html += '<tr>';
+                html += '<td>' + dan + ' x ' + col + ' = ' + (dan * col) + '</td>';
+                html += '</tr>';
+            }
+            html += '</table>';
+            return html;
+        };
+        const capitalize = function () {
+            if (document.frm.start.value == '' || document.frm.end.value == '') {
+                alert('시작단과 끝단을 입력하셔야 합니다.');
+                // 함수 강제 종료
+                return false;
+            }
+            let start = document.frm.start.value;
+            let end = document.frm.end.value;
+            console.log(start);
+            console.log(end);
+
+            let result = '';
+            let dan = start;
+            result += '<table border="1" cellspacing="0" width="200">';
+
+            for (let row = 1; row <= 3 && dan <= end; row++) {
+                result += '<tr>';
+                for (let col = 1; col <= 3 && dan <= end; col++) {
+                    result += '<td>' + gugudan(dan) + '</td>';
+                    dan++;
+                }
+                result += '</tr>';
+            }
+            let tag = document.getElementById('result');
+            tag.innerHTML = result;
+        };
+    </script>
+</head>
+
+<body>
+    <form name="frm">
+        시작단 : <input type="text" name="start" placeholder="시작단" />
+        ~ 끝단 : <input type="text" name="end" placeholder="끝단" />
+        <input type="button" value="구구단 출력" onclick="capitalize()" />
+    </form>
+    <hr />
+    <div id="result"></div>
+</body>
+
+</html>

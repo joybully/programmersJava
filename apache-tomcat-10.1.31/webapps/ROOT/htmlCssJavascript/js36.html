@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const capitalize = function () {
+            if (document.frm.name1.value == '') {
+                alert('이름을 입력하셔야 합니다.');
+                // 함수 강제 종료
+                return false;
+            }
+            let strName = document.frm.name1.value;
+            console.log(name);
+
+            let arrName = strName.split(' ');
+            let result = '';
+            for (let name of arrName) {
+                result += name.substring(0, 1).toUpperCase() + name.substring(1) + ' ';
+            }
+
+            let tag = document.getElementById('result');
+            tag.innerHTML = '결과 : ' + result;
+        };
+    </script>
+</head>
+
+<body>
+    <form name="frm">
+        이름입력 <input type="text" name="name1" placeholder="영문이름입력" />
+        <input type="button" value="대문자로 변경" onclick="capitalize()" />
+    </form>
+    <hr />
+    <div id="result">결과 :</div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const func = function () {
+            console.log('func 호출');
+        };
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // func();
+        // 특정조건(디자인적인 이벤트)에 의해서 호출
+        // 예를 들면
+        // 마우스 클릭
+        // 키보드 입력
+    </script>
+    <!-- 디자인 + (이벤트) + 함수 -->
+    <input type="button" value="클릭해줘" onclick="func()" /><br />
+    <input type="button" value="마우스 오버" onmouseover="func()" /><br />
+    <br />
+    <a href="javascript:func()">클릭해보셈</a><br />
+    <a href="javascript:func()"><img src="./tomcat.svg" /></a><br />
+</body>
+
+</html>

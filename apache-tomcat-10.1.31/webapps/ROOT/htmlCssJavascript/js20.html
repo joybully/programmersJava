@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 함수의 정의를 변수의 활용법 같이 활용 : 일급함수
+
+        // 파라미터
+        const callback = function () {
+            console.log('callback 호출');
+        };
+
+        const mainfunc = function (data) {
+            for (let i = 0; i <= 2; i++) {
+                data();
+            }
+        };
+
+        // 리턴
+        const rfunc = function () {
+            return function () {
+                console.log('function 호출');
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 함수의 정의를 파라미터로 전송 가능
+        mainfunc(callback);
+
+        // 밑의 2개는 똑같다
+        rfunc()();
+
+        let result = rfunc();
+        result();
+
+
+    </script>
+</body>
+
+</html>

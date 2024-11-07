@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // javascript - 클래스 표기법 4가지이지만
+        // 다 알 필요는 없음
+        class Student {
+            name = '홍길동';
+            kor = 98;
+            mat = 92;
+
+            // 생성자
+            constructor() {
+                console.log('생성자 호출');
+            }
+
+            // 메서드
+            showStudent() {
+                console.log('showStudent 호출');
+            }
+        }
+
+        let stu1 = new Student();
+        console.log(stu1.name, stu1.kor, stu1.mat);
+        stu1.showStudent();
+    </script>
+</body>
+
+</html>

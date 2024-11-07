@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const checkfrm = function () {
+            // hong gil dong => Hong Gil Dong
+            let strName = document.frm.name1.value;
+            if (strName == '') {
+                // console.log('입력없음');
+                // 경고창
+                alert('입력없음')
+            }
+            else {
+                let arrName = strName.split(' ');
+                // console.log(arrName);
+                let result = '';
+                for (let name of arrName) {
+                    // console.log(name);
+                    result += name.substring(0, 1).toUpperCase() + name.substring(1) + ' ';
+                }
+                // console.log(result);
+                document.frm.name2.value = result.trim();
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <form name="frm">
+        이름 <input type="text" name="name1" /><br />
+        변경된 이름 <input type="text" name="name2" /><br />
+        <br />
+        <input type="button" value="이름 변경" onclick="checkfrm()" />
+    </form>
+</body>
+
+</html>

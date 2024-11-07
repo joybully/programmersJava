@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const gugudan = (dan) => {
+            let html = '';
+            html += '<table border="1" cellspacing="0" width="200">';
+            for (let col = 1; col <= 9; col++) {
+                html += '<tr>';
+                html += '<td>' + dan + ' x ' + col + ' = ' + (dan * col) + '</td>';
+                html += '</tr>';
+            }
+            html += '</table>';
+            return html;
+        };
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let dan = 1;
+        document.write('<table border="1" cellspacing="0" width="200">');
+        for (let row = 1; row <= 3; row++) {
+            document.write('<tr>');
+            for (let col = 1; col <= 3; col++) {
+                document.write('<td>' + gugudan(dan) + '</td>');
+                dan++;
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+    </script>
+</body>
+
+</html>

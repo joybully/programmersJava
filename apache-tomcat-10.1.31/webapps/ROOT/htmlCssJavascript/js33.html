@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const checkfrm = function () {
+            console.log(document.frm.r.length);
+            for (let i = 0; i < document.frm.r.length; i++) {
+                if (document.frm.r[i].checked) {
+                    console.log(document.frm.r[i].value);
+                }
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <form name="frm">
+        <input type="radio" name="r" value="사과" />사과<br />
+        <input type="radio" name="r" value="수박" checked />수박<br />
+        <input type="radio" name="r" value="딸기" />딸기<br />
+        <input type="radio" name="r" value="참외" />참외<br />
+
+        <input type="button" value="내용 가져오기" onClick="checkfrm()" />
+    </form>
+</body>
+
+</html>

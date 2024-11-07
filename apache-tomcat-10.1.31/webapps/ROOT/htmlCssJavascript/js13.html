@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        for (let i = 1; i <= 9; i++) {
+            console.log(i);
+        }
+    </script>
+
+    <!-- 1행 9열 테이블-->
+
+    <script type="text/javascript">
+        document.write('<table border="1" cellspacing="0">');
+        document.write('<tr>');
+        for (let i = 1; i <= 9; i++) {
+            //document.write('<td>1열</td>');
+            document.write('<td>' + i + '열</td>');
+        }
+        document.write('</tr>');
+        document.write('</table>');
+        document.write('<table border="1" cellspacing="0">');
+        document.write('<tr>');
+        for (let i = 1; i <= 9; i++) {
+            //document.write('<td>1열</td>');
+            document.write('<td>3 x ' + i + ' = ' + (i * 3) + '</td>');
+        }
+        document.write('</tr>');
+        document.write('</table>');
+    </script>
+
+</body>
+
+</html>

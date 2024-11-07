@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        for (let i = 1; i <= 9; i++) {
+            console.log(i);
+        }
+    </script>
+
+    <!-- 1행 9열 테이블-->
+
+    <table border="1" cellspacing="0">
+        <tr>
+            <!--
+            <td>1열</td>
+            <td>2열</td>
+            <td>3열</td>
+            <td>4열</td>
+            <td>5열</td>
+            <td>6열</td>
+            <td>7열</td>
+            <td>8열</td>
+            <td>9열</td> 
+            -->
+            <script type="text/javascript">
+                for (let i = 1; i <= 9; i++) {
+                    document.write('<td>1열</td>');
+                }
+            </script>
+        </tr>
+    </table>
+
+</body>
+
+</html>

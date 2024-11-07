@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 배열
+        let arr = [];
+        let arr2 = [273, 32, 103, 57, 52];
+
+        // 객체의 내용
+        console.log(arr2);
+        document.write(arr2);
+
+        for (let i = 0; i < arr2.length; i++) {
+            console.log(arr2[i]);
+        }
+
+        // 향상된 for
+        // 인덱스 번호 출력
+        for (let i in arr2) {
+            console.log(i);
+        }
+
+        // 내용 출력
+        for (let i in arr2) {
+            console.log(arr2[i]);
+        }
+        for (let value of arr2) {
+            console.log(value);
+        }
+
+        // Array 내장 객체 사용
+        // Array() - 생성자 / parseInt() - 일반함수
+        let arr3 = new Array(273, 32, 103, 57, 52);
+        console.log(arr3);
+    </script>
+</body>
+
+</html>

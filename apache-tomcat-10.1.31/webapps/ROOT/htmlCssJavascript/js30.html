@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const checkfrm = function () {
+            console.log(document.frm.id1.value);
+            console.log(typeof document.frm.id1.value);
+
+            let id1 = document.frm.id1.value;
+            console.log(id1);
+
+            document.frm.id1.value = "새로운 데이터";
+        };
+    </script>
+</head>
+
+<body>
+    <form name="frm">
+        아이디1 <input type="text" name="id1" />
+        <br />
+        <input type="button" value="입력 검사" onclick="checkfrm()" />
+    </form>
+</body>
+
+</html>
