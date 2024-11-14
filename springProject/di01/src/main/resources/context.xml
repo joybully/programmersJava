@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- Spring Bean Configuration -->
+    <!-- HelloBean1 helloBean1 = new HelloBean1()-->
+    <bean name="helloBean1" class="com.example.di01.model2.HelloBean1"/>
+    <bean name="helloBean2" class="com.example.di01.model2.HelloBean2"/>
+</beans>
