@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- life cycle -->
+    <!-- init-method - 각각 -->
+    <bean id="writeAction" class="com.example.lifecycle.WriteAction" init-method="init_method" destroy-method="destroy_method">
+        <property name="writer">
+            <value>홍길동</value>
+        </property>
+    </bean>
+    <!-- 전체 빈에 대한 처리 -->
+    <bean class="com.example.lifecycle.CustomBeanPostProcessor"/>
+</beans>

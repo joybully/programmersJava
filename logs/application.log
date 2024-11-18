@@ -1,0 +1,21 @@
+2024-11-18T15:41:40.333+09:00  INFO 21864 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : Starting Boot02Application using Java 17.0.12 with PID 21864 (C:\java\springProject\boot02\build\classes\java\main started by Baptist in C:\java\springProject\boot02)
+2024-11-18T15:41:40.338+09:00  INFO 21864 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : No active profile set, falling back to 1 default profile: "default"
+2024-11-18T15:41:40.437+09:00  INFO 21864 --- [boot02] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-18T15:41:41.566+09:00  INFO 21864 --- [boot02] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-18T15:41:41.630+09:00  INFO 21864 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : Started Boot02Application in 2.316 seconds (process running for 3.083)
+2024-11-18T15:46:03.509+09:00  INFO 12680 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : Starting Boot02Application using Java 17.0.12 with PID 12680 (C:\java\springProject\boot02\build\classes\java\main started by Baptist in C:\java\springProject\boot02)
+2024-11-18T15:46:03.513+09:00  INFO 12680 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : No active profile set, falling back to 1 default profile: "default"
+2024-11-18T15:46:03.581+09:00  INFO 12680 --- [boot02] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-18T15:46:04.776+09:00  INFO 12680 --- [boot02] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-18T15:46:04.824+09:00  INFO 12680 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : Started Boot02Application in 2.051 seconds (process running for 2.605)
+2024-11-18T15:46:04.831+09:00  INFO 12680 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : info message
+2024-11-18T15:46:04.831+09:00  WARN 12680 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : warn message
+2024-11-18T15:46:04.831+09:00 ERROR 12680 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : error message
+2024-11-18T15:49:03.139+09:00  INFO 21948 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : Starting Boot02Application using Java 17.0.12 with PID 21948 (C:\java\springProject\boot02\build\classes\java\main started by Baptist in C:\java\springProject\boot02)
+2024-11-18T15:49:03.143+09:00  INFO 21948 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : No active profile set, falling back to 1 default profile: "default"
+2024-11-18T15:49:03.214+09:00  INFO 21948 --- [boot02] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-18T15:49:04.362+09:00  INFO 21948 --- [boot02] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-18T15:49:04.408+09:00  INFO 21948 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : Started Boot02Application in 2.092 seconds (process running for 2.631)
+2024-11-18T15:49:04.414+09:00  INFO 21948 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : logger:info message
+2024-11-18T15:49:04.418+09:00  WARN 21948 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : logger:warn message
+2024-11-18T15:49:04.419+09:00 ERROR 21948 --- [boot02] [restartedMain] com.example.boot.Boot02Application       : logger:error message

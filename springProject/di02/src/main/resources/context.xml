@@ -9,5 +9,5 @@
     <bean name="helloBean22" class="com.example.model.HelloBean" scope="singleton"/>
 
     <!-- Spring객체를 Singleton으로 생성한다 -> default가 Singleton이다-->
-    <bean name="helloBean23" class="com.example.model.HelloBean" />
+    <bean name="helloBean23" class="com.example.model.HelloBean"/>
 </beans>
