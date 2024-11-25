@@ -1,13 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="org.example.model.BoardTO"%>
-<%@ page import="org.example.model.BoardDAO"%>
+
+<%@ page import="org.example.model.BoardTO" %>
+<%@ page import="org.example.model.BoardDAO" %>
+
 <%
 	BoardTO to = new BoardTO();
-	to.setSeq(request.getParameter("seq"));
+	to.setSeq( request.getParameter( "seq" ) );
 
 	BoardDAO dao = new BoardDAO();
-	to = dao.boardView(to);
+	to = dao.boardView( to );
 
 	String seq = to.getSeq();
 	String subject = to.getSubject();
@@ -17,7 +19,6 @@
 	String wdate = to.getWdate();
 	String hit = to.getHit();
 	String content = to.getContent();
-
 %>
 
 <!DOCTYPE html>
@@ -43,18 +44,18 @@
 			<table>
 			<tr>
 				<th width="10%">제목</th>
-				<td width="60%"><%=subject%></td>
+				<td width="60%"><%=subject %></td>
 				<th width="10%">등록일</th>
-				<td width="20%"><%=wdate%></td>
+				<td width="20%"><%=wdate %></td>
 			</tr>
 			<tr>
 				<th>글쓴이</th>
-				<td><%=writer%>(<%=mail%>)(<%=wip%>)</td>
+				<td><%=writer %>(<%=mail %>)(<%=wip %>)</td>
 				<th>조회</th>
-				<td><%=hit%></td>
+				<td><%=hit %></td>
 			</tr>
 			<tr>
-				<td colspan="4" height="200" valign="top" style="padding: 20px; line-height: 160%"><%=content%></td>
+				<td colspan="4" height="200" valign="top" style="padding: 20px; line-height: 160%"><%=content %></td>
 			</tr>
 			</table>
 		</div>
@@ -64,11 +65,11 @@
 				<input type="button" value="목록" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_list1.jsp'" />
 			</div>
 			<div class="align_right">
-				<input type="button" value="수정" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_modify1.jsp?seq=<%=seq%>'" />
-				<input type="button" value="삭제" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_delete1.jsp?seq=<%=seq%>'" />
+				<input type="button" value="수정" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_modify1.jsp?seq=<%=seq %>'" />
+				<input type="button" value="삭제" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_delete1.jsp?seq=<%=seq %>'" />
 				<input type="button" value="쓰기" class="btn_write btn_txt01" style="cursor: pointer;" onclick="location.href='board_write1.jsp'" />
 			</div>
-		</div>
+		</div>	
 		<!--//게시판-->
 	</div>
 </div>

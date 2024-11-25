@@ -7,25 +7,29 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="../../css/board.css">
+<link rel="stylesheet" type="text/css" href="../../css/board.css" />
 	<script type="text/javascript">
 		window.onload = function() {
-			document.getElementById('wbtn').onclick = function () {
+
+			// DOM 이용한 동적인 이벤트
+			document.getElementById( 'wbtn' ).onclick = function () {
+				//alert( '버튼 클릭' );
 				// 필수 입력 항목 검사
-				if (document.wfrm.info.checked == false) {
-					alert('동의하셔야 합니다.');
+				if ( document.wfrm.info.checked == false ) {
+					alert( '동의하셔야 합니다.' );
 					return false;
 				}
-				if(document.wfrm.writer.value.trim() == ''){
-					alert('글쓴이를 입력하셔야 합니다.');
+				//alert( '정상' );
+				if ( document.wfrm.writer.value.trim() == '' ) {
+					alert( '글쓴이를 입력하셔야 합니다.' );
 					return false;
 				}
-				if(document.wfrm.subject.value.trim() == ''){
-					alert('제목를 입력하셔야 합니다.');
+				if ( document.wfrm.subject.value.trim() == '' ) {
+					alert( '제목을 입력하셔야 합니다.' );
 					return false;
 				}
-				if(document.wfrm.password.value.trim() == ''){
-					alert('비밀번호를 입력하셔야 합니다.');
+				if ( document.wfrm.password.value.trim() == '' ) {
+					alert( '비밀번호를 입력하셔야 합니다.' );
 					return false;
 				}
 				document.wfrm.submit();

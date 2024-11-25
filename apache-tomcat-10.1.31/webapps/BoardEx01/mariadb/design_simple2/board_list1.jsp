@@ -1,7 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="import.jsp"%>
-<%@ page import =" java.sql.ResultSet"%>
+
+<%@ page import="javax.naming.Context" %>
+<%@ page import="javax.naming.InitialContext" %>
+<%@ page import="javax.naming.NamingException" %>
+
+<%@ page import="javax.sql.DataSource" %>
+
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.SQLException" %>
 
 <%
 	Connection conn = null;
@@ -20,52 +29,52 @@
 
 		conn = dataSource.getConnection();
 
-		String sql = "select seq, subject, writer, date_format(wdate, '%Y/%m/%d') wdate, hit, datediff(now(),wdate) wgap from board1 order by seq desc";
-		pstmt = conn.prepareStatement(sql);
+		String sql = "select seq, subject, writer, date_format( wdate, '%Y/%m/%d' ) wdate, hit, datediff( now(), wdate ) wgap from board1 order by seq desc";
+		pstmt = conn.prepareStatement( sql );
 
 		rs = pstmt.executeQuery();
 
-		// 데이터 갯수를 얻어내는 방법
+		// 데이터 갯수을 얻어내는 방법
 		rs.last();
 		totalRecord = rs.getRow();
 		rs.beforeFirst();
 
-		while(rs.next()){
-			String seq = rs.getString("seq");
-			String subject = rs.getString("subject");
-			String writer = rs.getString("writer");
-			String wdate = rs.getString("wdate");
-			String hit = rs.getString("hit");
+		while( rs.next() ) {
+			String seq = rs.getString( "seq" );
+			String subject = rs.getString( "subject" );
+			String writer = rs.getString( "writer" );
+			String wdate = rs.getString( "wdate" );
+			String hit = rs.getString( "hit" );
 
-			int wgap = rs.getInt("wgap");
+			int wgap = rs.getInt( "wgap" );
 
-			// System.out.println(seq);
-			// System.out.println(subject);
+			//System.out.println( seq );
+			//System.out.println( subject );
 
-			sbHtml.append("<tr>");
-			sbHtml.append("<td>&nbsp;</td>");
-			sbHtml.append("<td>" + seq+ "</td>");
-			if(wgap==0){
-				sbHtml.append("<td class='left'><a href='board_view1.jsp?seq="+seq+"'>"+subject+"</a>&nbsp;<img src='../../images/icon_new.gif' alt='NEW'></td>");
-			} else{
-				sbHtml.append("<td class='left'><a href='board_view1.jsp?seq="+seq+"'>"+subject+"</a></td>");
+			sbHtml.append( "<tr>" );
+			sbHtml.append( "<td>&nbsp;</td>" );
+			sbHtml.append( "<td>" + seq + "</td>" );
+			if( wgap == 0 ) {
+				sbHtml.append("<td class='left'><a href='board_view1.jsp?seq=" + seq + "'>" + subject + "</a>&nbsp;<img src='../../images/icon_new.gif' alt='NEW'></td>");
+			} else {
+				sbHtml.append("<td class='left'><a href='board_view1.jsp?seq=" + seq + "'>" + subject + "</a></td>");
 			}
-			sbHtml.append("<td>"+writer+"</td>");
-			sbHtml.append("<td>"+wdate+"</td>");
-			sbHtml.append("<td>"+hit+"</td>");
-			sbHtml.append("<td>&nbsp;</td>");
-			sbHtml.append("</tr>");
+			sbHtml.append( "<td>" + writer + "</td>" );
+			sbHtml.append( "<td>" + wdate + "</td>" );
+			sbHtml.append( "<td>" + hit + "</td>" );
+			sbHtml.append( "<td>&nbsp;</td>" );
+			sbHtml.append( "</tr>" );
 		}
-	} catch(NamingException e){
-		System.out.println("[에러] : " + e.getMessage());
-	} catch(SQLException e){
-		System.out.println("[에러] : " + e.getMessage());
-	} finally{
-		if(rs!=null)rs.close();;
-		if(pstmt!=null)pstmt.close();;
-		if(conn!=null)conn.close();;
-	}
 
+	} catch ( NamingException e ) {
+		System.out.println( "[에러] " + e.getMessage() );
+	} catch ( SQLException e ) {
+		System.out.println( "[에러] " + e.getMessage() );
+	} finally {
+		if ( rs != null ) rs.close();;
+		if ( pstmt != null ) pstmt.close();;
+		if ( conn != null ) conn.close();;
+	}
 %>
 
 <!DOCTYPE html>
@@ -87,7 +96,7 @@
 <div class="con_txt">
 	<div class="contents_sub">
 		<div class="board_top">
-			<div class="bold">총 <span class="txt_orange"><%=totalRecord%></span>건</div>
+			<div class="bold">총 <span class="txt_orange"><%=totalRecord %></span>건</div>
 		</div>
 
 		<!--게시판-->
@@ -102,7 +111,7 @@
 				<th width="5%">조회</th>
 				<th width="3%">&nbsp;</th>
 			</tr>
-				<!--
+	<!--
 			<tr>
 				<td>&nbsp;</td>
 				<td>1</td>
@@ -112,8 +121,8 @@
 				<td>6</td>
 				<td>&nbsp;</td>
 			</tr>
-			-->
-<%=sbHtml.toString()%>
+	-->
+<%=sbHtml.toString() %>
 			</table>
 		</div>	
 

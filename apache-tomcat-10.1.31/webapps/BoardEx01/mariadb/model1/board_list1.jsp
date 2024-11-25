@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <%@ page import="org.example.model.BoardTO" %>
 <%@ page import="org.example.model.BoardDAO" %>
 <%@ page import="java.util.ArrayList" %>
@@ -12,7 +13,7 @@
 
 	StringBuilder sbHtml = new StringBuilder();
 
-	for(BoardTO to: lists){
+	for( BoardTO to : lists ) {
 		String seq = to.getSeq();
 		String subject = to.getSubject();
 		String writer = to.getWriter();
@@ -20,19 +21,19 @@
 		String hit = to.getHit();
 		int wgap = to.getWgap();
 
-		sbHtml.append("<tr>");
-		sbHtml.append("<td>&nbsp;</td>");
-		sbHtml.append("<td>" + seq+ "</td>");
-		if(wgap==0){
-			sbHtml.append("<td class='left'><a href='board_view1.jsp?seq="+seq+"'>"+subject+"</a>&nbsp;<img src='../../images/icon_new.gif' alt='NEW'></td>");
-		} else{
-			sbHtml.append("<td class='left'><a href='board_view1.jsp?seq="+seq+"'>"+subject+"</a></td>");
+		sbHtml.append( "<tr>" );
+		sbHtml.append( "<td>&nbsp;</td>" );
+		sbHtml.append( "<td>" + seq + "</td>" );
+		if( wgap == 0 ) {
+			sbHtml.append("<td class='left'><a href='board_view1.jsp?seq=" + seq + "'>" + subject + "</a>&nbsp;<img src='../../images/icon_new.gif' alt='NEW'></td>");
+		} else {
+			sbHtml.append("<td class='left'><a href='board_view1.jsp?seq=" + seq + "'>" + subject + "</a></td>");
 		}
-		sbHtml.append("<td>"+writer+"</td>");
-		sbHtml.append("<td>"+wdate+"</td>");
-		sbHtml.append("<td>"+hit+"</td>");
-		sbHtml.append("<td>&nbsp;</td>");
-		sbHtml.append("</tr>");
+		sbHtml.append( "<td>" + writer + "</td>" );
+		sbHtml.append( "<td>" + wdate + "</td>" );
+		sbHtml.append( "<td>" + hit + "</td>" );
+		sbHtml.append( "<td>&nbsp;</td>" );
+		sbHtml.append( "</tr>" );
 	}
 %>
 
@@ -55,7 +56,7 @@
 <div class="con_txt">
 	<div class="contents_sub">
 		<div class="board_top">
-			<div class="bold">총 <span class="txt_orange"><%=totalRecord%></span>건</div>
+			<div class="bold">총 <span class="txt_orange"><%=totalRecord %></span>건</div>
 		</div>
 
 		<!--게시판-->
@@ -70,7 +71,7 @@
 				<th width="5%">조회</th>
 				<th width="3%">&nbsp;</th>
 			</tr>
-				<!--
+	<!--
 			<tr>
 				<td>&nbsp;</td>
 				<td>1</td>
@@ -80,8 +81,8 @@
 				<td>6</td>
 				<td>&nbsp;</td>
 			</tr>
-			-->
-<%=sbHtml.toString()%>
+	-->
+<%=sbHtml.toString() %>
 			</table>
 		</div>	
 

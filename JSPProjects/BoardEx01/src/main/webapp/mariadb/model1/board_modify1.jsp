@@ -1,25 +1,26 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
-		 pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+
 <%@ page import="org.example.model.BoardTO" %>
 <%@ page import="org.example.model.BoardDAO" %>
+
 <%
 	BoardTO to = new BoardTO();
-	to.setSeq(request.getParameter("seq"));
+	to.setSeq( request.getParameter( "seq" ) );
 
 	BoardDAO dao = new BoardDAO();
-	dao.boardModify(to);
+	to = dao.boardModify( to );
 
 	String seq = to.getSeq();
 	String subject = to.getSubject();
 	String writer = to.getWriter();
 	String[] mail = null;
-	if(to.getMail().equals("")){
-		mail = new String[]{"",""};
-	}else {
-		mail = to.getMail().split("@");
+	if( to.getMail().equals( "" ) ) {
+		mail = new String[] { "", "" };
+	} else {
+		mail = to.getMail().split( "@" );
 	}
 	String content = to.getContent();
-
 %>
 
 <!DOCTYPE html>
@@ -30,21 +31,21 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="../../css/board.css">
-	<script type="text/javascript">
-		window.onload = function(){
-			document.getElementById('mbtn').onclick = function(){
-				if(document.mfrm.subject.value == ''){
-					alert('제목을 입력하셔야 합니다.');
-					return false;
-				}
-				if(document.mfrm.password.value == ''){
-					alert('비밀번호를 입력하셔야 합니다.');
-					return false;
-				}
-				document.mfrm.submit();
-			};
+<script type="text/javascript">
+	window.onload = function () {
+		document.getElementById( 'mbtn' ).onclick = function () {
+			if ( document.mfrm.subject.value == '' ) {
+				alert( '제목을 입력하셔야 합니다.' );
+				return false;
+			}
+			if ( document.mfrm.password.value == '' ) {
+				alert( '비밀번호를 입력하셔야 합니다.' );
+				return false;
+			}
+			document.mfrm.submit();
 		};
-	</script>
+	};
+</script>
 </head>
 
 <body>
@@ -55,18 +56,18 @@
 </div>
 <div class="con_txt">
 	<form action="board_modify1_ok.jsp" method="post" name="mfrm">
-		<input type="hidden" name="seq" value="<%=seq%>"/>
-		<div class="contents_sub">	
+		<input type="hidden" name="seq" value="<%=seq %>" />
+		<div class="contents_sub">
 			<!--게시판-->
 			<div class="board_write">
 				<table>
 				<tr>
 					<th class="top">글쓴이</th>
-					<td class="top"><input type="text" name="writer" value="<%=writer%>" class="board_view_input_mail" maxlength="5" readonly/></td>
+					<td class="top"><input type="text" name="writer" value="<%=writer %>" class="board_view_input_mail" maxlength="5" readonly/></td>
 				</tr>
 				<tr>
 					<th>제목</th>
-					<td><input type="text" name="subject" value="<%=subject%>" class="board_view_input" /></td>
+					<td><input type="text" name="subject" value="<%=subject %>" class="board_view_input" /></td>
 				</tr>
 				<tr>
 					<th>비밀번호</th>
@@ -74,19 +75,19 @@
 				</tr>
 				<tr>
 					<th>내용</th>
-					<td><textarea name="content" class="board_editor_area"><%=content%></textarea></td>
+					<td><textarea name="content" class="board_editor_area"><%=content %></textarea></td>
 				</tr>
 				<tr>
 					<th>이메일</th>
-					<td><input type="text" name="mail1" value="<%=mail[0]%>" class="board_view_input_mail"/> @ <input type="text" name="mail2" value="<%=mail[1]%>" class="board_view_input_mail"/></td>
+					<td><input type="text" name="mail1" value="<%=mail[0] %>" class="board_view_input_mail"/> @ <input type="text" name="mail2" value="<%=mail[1] %>" class="board_view_input_mail"/></td>
 				</tr>
 				</table>
 			</div>
-			
+
 			<div class="btn_area">
 				<div class="align_left">
 					<input type="button" value="목록" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_list1.jsp'" />
-					<input type="button" value="보기" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_view1.jsp?seq=<%=seq%>'" />
+					<input type="button" value="보기" class="btn_list btn_txt02" style="cursor: pointer;" onclick="location.href='board_view1.jsp?seq=<%=seq %>'" />
 				</div>
 				<div class="align_right">
 					<input type="button" id="mbtn" value="수정" class="btn_write btn_txt01" style="cursor: pointer;" />
