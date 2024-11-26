@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
 
-@Controller
+// @Controller
 public class BoardController {
 
-    @Autowired
+    // @Autowired
     private BoardDAO boardDAO;
 
     @RequestMapping( "/list.do" )
